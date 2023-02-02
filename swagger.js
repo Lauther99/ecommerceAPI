@@ -5,7 +5,7 @@ const options = {
     apis: [
         "./src/documentation/routes/docAuthRoutes.js",
         "./src/documentation/routes/docProductsRoutes.js",
-        "./src/documentation/routes/doccarRoutes.js",    
+        "./src/documentation/routes/docCarRoutes.js",    
         "./src/documentation/routes/docOrderRoutes.js",    
         "./src/documentation/schemas/authSchemas.js",
         "./src/documentation/schemas/productsSchemas.js",
