@@ -25,13 +25,8 @@ class product extends Sequelize.Model {
       allowNull: false,
       defaultValue: 100
     },
-    status: {
-      type: DataTypes.TINYINT,
-      allowNull: true,
-      defaultValue: 1
-    },
     product_image: {
-      type: DataTypes.BLOB,
+      type: DataTypes.TEXT,
       allowNull: true
     },
     User_id: {
@@ -41,6 +36,11 @@ class product extends Sequelize.Model {
         model: 'user',
         key: 'id'
       }
+    },
+    status: {
+      type: DataTypes.ENUM('AVAILABLE','OUT'),
+      allowNull: true,
+      defaultValue: "AVAILABLE"
     }
   }, {
     sequelize,
