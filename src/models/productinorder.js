@@ -33,7 +33,7 @@ class productinorder extends Sequelize.Model {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'order',
+        model: 'orders',
         key: 'id'
       }
     }

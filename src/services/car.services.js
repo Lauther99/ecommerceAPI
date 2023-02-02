@@ -1,5 +1,5 @@
 const models = require('../models');
-const { car, productincart, product} = models
+const { car, productincart } = models
 
 class CarServices {
     static async createCar(userId) {

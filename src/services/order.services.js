@@ -1,10 +1,10 @@
 const models = require('../models');
-const { order, productinorder } = models
+const { orders, productinorder } = models
 
 class OrderServices {
     static async newOrder(id) {
         try {
-            const result = await order.create({
+            const result = await orders.create({
                 User_id: id
             })
             return result
@@ -28,7 +28,7 @@ class OrderServices {
 
     static async getAllOrders(userId) {
         try {
-            const result = await order.findAll({
+            const result = await orders.findAll({
                 where: {
                     User_id: userId
                 },
@@ -48,7 +48,7 @@ class OrderServices {
 
     static async getOneOrder(orderId){
         try {
-            const or = await order.findOne({
+            const or = await orders.findOne({
                 where: {
                     id: orderId
                 }
@@ -61,7 +61,7 @@ class OrderServices {
 
     static async purchase(orderId){
         try {
-            const result = await order.update({
+            const result = await orders.update({
                 status: "PURCHASED"
             },
             {
