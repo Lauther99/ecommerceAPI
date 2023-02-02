@@ -15,7 +15,7 @@ db.authenticate()
     .then(() => console.log("Autenticación exitosa"))
     .catch((error) => console.log(error));
 
-initModels();
+initModels(db);
 
 db.sync({ alter: true })
     .then(() => console.log("Base de datos sincronizada"))
